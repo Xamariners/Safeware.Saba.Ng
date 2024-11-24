@@ -1,0 +1,21 @@
+{
+  "production": true,
+  "application": {
+    "baseUrl":"http://localhost:4200",
+    "name": "Ng",
+    "logoUrl": ""
+  },
+  "oAuthConfig": {
+    "issuer": "https://localhost:44348",
+    "redirectUri": "https://localhost:44348",
+    "clientId": "Ng_App",
+    "responseType": "code",
+    "scope": "offline_access openid profile email phone Ng"
+  },
+  "apis": {
+    "default": {
+      "url": "https://localhost:44348",
+      "rootNamespace": "Ng"
+    }
+  }
+}

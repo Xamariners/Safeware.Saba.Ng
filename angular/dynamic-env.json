@@ -1,0 +1,21 @@
+{
+  "production": true,
+  "application": {
+    "baseUrl":"https://ng-web",
+    "name": "Ng",
+    "logoUrl": ""
+  },
+  "oAuthConfig": {
+    "issuer": "https://ng-api/",
+    "redirectUri": "https://ng",
+    "clientId": "Ng_App",
+    "responseType": "code",
+    "scope": "offline_access openid profile email phone"
+  },
+  "apis": {
+    "default": {
+      "url": "https://ng-api",
+      "rootNamespace": "Ng"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "32d853f6-9ca3-42f0-97fe-1129d734dd38",
+  "template": "app-nolayers",
+  "versions": {
+    "LeptonX": "4.0.0",
+    "AbpFramework": "9.0.0",
+    "AbpCommercial": "9.0.0",
+    "AbpStudio": "0.9.13",
+    "TargetDotnetFramework": "net9.0"
+  },
+  "modules": {
+    "Safeware.Saba.Ng": {
+      "path": "Safeware.Saba.Ng.abpmdl"
+    }
+  },
+  "runProfiles": {
+    "Default": {
+      "path": "etc/run-profiles/Default.abprun.json"
+    }
+  },
+  "options": {
+    "httpRequests": {
+      "ignoredUrls": [
+        "^/metrics$"
+      ]
+    }
+  },
+  "creatingStudioConfiguration": {
+    "template": "app-nolayers",
+    "createdAbpStudioVersion": "0.9.13",
+    "multiTenancy": "true",
+    "uiFramework": "angular",
+    "databaseProvider": "mongodb",
+    "theme": "leptonx",
+    "themeStyle": "system",
+    "progressiveWebApp": "",
+    "publicWebsite": "",
+    "socialLogin": ""
+  }
+}

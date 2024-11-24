@@ -1,0 +1,21 @@
+﻿{
+  "selectedKubernetesProfile": null,
+  "solutionRunner": {
+    "selectedProfile": "Default",
+    "targetFrameworks": [],
+    "applicationsWithAlwaysBuild": [],
+    "applicationBatchStartStates": [
+      {
+        "profile": "Default",
+        "applicationOrFolder": "Safeware.Saba.Ng",
+        "value": 0
+      },
+      {
+        "profile": "Default",
+        "applicationOrFolder": "Safeware.Saba.Ng.Angular",
+        "value": 0
+      }
+    ],
+    "folderBatchStartStates": []
+  }
+}
