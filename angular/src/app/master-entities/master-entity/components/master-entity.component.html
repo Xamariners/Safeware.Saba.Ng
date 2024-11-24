@@ -155,6 +155,7 @@
       <!--<suite-custom-code-block-7>-->
       <!--</suite-custom-code-block-7>-->
       <ngx-datatable
+        #masterEntityTable
         default
         [rows]="service.data.items"
         [count]="service.data.totalCount"
@@ -200,6 +201,43 @@
               [checked]="isSelected"
               (change)="onCheckboxChangeFn($event)"
             />
+          </ng-template>
+        </ngx-datatable-column>
+
+        <!-- Row Detail Template -->
+        <ngx-datatable-row-detail rowHeight="100%">
+          <ng-template let-row="row" let-expanded="expanded" ngx-datatable-row-detail-template>
+            <ul id="masterEntity-nav-tabs mb-0" ngbNav #nav="ngbNav" class="nav-tabs">
+              <li id="child-entity-informations" ngbNavItem>
+                <a ngbNavLink>{{ '::ChildEntity' | abpLocalization }}</a>
+
+                <ng-template ngbNavContent>
+                  <app-child-entity [masterEntityId]="row.id" />
+                </ng-template>
+              </li>
+            </ul>
+
+            <div [ngbNavOutlet]="nav" class="m-0 fade-in-top"></div>
+          </ng-template>
+        </ngx-datatable-row-detail>
+
+        <ngx-datatable-column
+          [width]="50"
+          [resizeable]="false"
+          [sortable]="false"
+          [draggable]="false"
+          [canAutoResize]="false"
+        >
+          <ng-template let-row="row" let-expanded="expanded" ngx-datatable-cell-template>
+            <a
+              href="javascript:void(0)"
+              class="ngx-datatable-toggle text-decoration-none text-muted fa"
+              [class.fa-angle-down]="!expanded"
+              [class.fa-angle-up]="expanded"
+              title="Expand/Collapse Row"
+              (click)="toggleExpandRow(row)"
+            >
+            </a>
           </ng-template>
         </ngx-datatable-column>
 

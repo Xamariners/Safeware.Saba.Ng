@@ -22,6 +22,11 @@ public class NgPermissionDefinitionProvider : PermissionDefinitionProvider
         masterEntityPermission.AddChild(NgPermissions.MasterEntities.Create, L("Permission:Create"));
         masterEntityPermission.AddChild(NgPermissions.MasterEntities.Edit, L("Permission:Edit"));
         masterEntityPermission.AddChild(NgPermissions.MasterEntities.Delete, L("Permission:Delete"));
+
+        var childEntityPermission = myGroup.AddPermission(NgPermissions.ChildEntities.Default, L("Permission:ChildEntities"));
+        childEntityPermission.AddChild(NgPermissions.ChildEntities.Create, L("Permission:Create"));
+        childEntityPermission.AddChild(NgPermissions.ChildEntities.Edit, L("Permission:Edit"));
+        childEntityPermission.AddChild(NgPermissions.ChildEntities.Delete, L("Permission:Delete"));
     }
 
     private static LocalizableString L(string name)

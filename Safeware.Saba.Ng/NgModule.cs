@@ -1,3 +1,4 @@
+using Safeware.Saba.Ng.ChildEntities;
 using Safeware.Saba.Ng.MasterEntities;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Google;
@@ -468,6 +469,8 @@ public class NgModule : AbpModule
         {
             options.AddDefaultRepositories();
             options.AddRepository<MasterEntity, MasterEntities.MongoMasterEntityRepository>();
+
+            options.AddRepository<ChildEntity, ChildEntities.MongoChildEntityRepository>();
 
         });
 

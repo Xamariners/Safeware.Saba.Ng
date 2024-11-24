@@ -1,3 +1,5 @@
+using Book;
+using Safeware.Saba.Ng.ChildEntities;
 using System;
 using Safeware.Saba.Ng.Shared;
 using Volo.Abp.AutoMapper;
@@ -19,5 +21,9 @@ public class NgAutoMapperProfile : Profile
 
         CreateMap<MasterEntity, MasterEntityDto>();
         CreateMap<MasterEntity, MasterEntityExcelDto>();
+
+        CreateMap<ChildEntity, ChildEntityDto>();
+        CreateMap<ChildEntityWithNavigationProperties, ChildEntityWithNavigationPropertiesDto>();
+        CreateMap<Book, LookupDto<Guid>>().ForMember(dest => dest.DisplayName, opt => opt.MapFrom(src => src.Name));
     }
 }

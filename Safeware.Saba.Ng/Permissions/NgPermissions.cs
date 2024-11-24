@@ -22,4 +22,12 @@ public static class NgPermissions
         public const string Create = Default + ".Create";
         public const string Delete = Default + ".Delete";
     }
+
+    public static class ChildEntities
+    {
+        public const string Default = GroupName + ".ChildEntities";
+        public const string Edit = Default + ".Edit";
+        public const string Create = Default + ".Create";
+        public const string Delete = Default + ".Delete";
+    }
 }

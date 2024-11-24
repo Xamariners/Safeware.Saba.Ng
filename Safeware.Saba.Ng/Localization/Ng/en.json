@@ -75,6 +75,15 @@
     "MinAddress": "Min Address",
     "MaxName": "Max Name",
     "MaxCost": "Max Cost",
-    "MaxAddress": "Max Address"
+    "MaxAddress": "Max Address",
+    "ChildEntities": "Child Entities",
+    "NewChildEntity": "New Child Entity",
+    "ChildEntity": "Child Entity",
+    "Menu:ChildEntities": "Child Entities",
+    "Enabled": "Enabled",
+    "MinEnabled": "Min Enabled",
+    "MaxEnabled": "Max Enabled",
+    "Book": "Book",
+    "Permission:ChildEntities": "Child Entities"
   }
 }

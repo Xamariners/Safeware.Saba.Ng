@@ -7,6 +7,8 @@ using Volo.Abp.Domain.Entities.Auditing;
 using Volo.Abp.MultiTenancy;
 using JetBrains.Annotations;
 
+using Safeware.Saba.Ng.ChildEntities;
+
 using Volo.Abp;
 
 namespace Safeware.Saba.Ng.MasterEntities
@@ -23,6 +25,8 @@ namespace Safeware.Saba.Ng.MasterEntities
         [NotNull]
         public virtual string Address { get; set; }
 
+        public ICollection<ChildEntity> ChildEntities { get; private set; }
+
         protected MasterEntityBase()
         {
 
@@ -36,6 +40,7 @@ namespace Safeware.Saba.Ng.MasterEntities
             Cost = cost;
             Address = address;
             Name = name;
+            ChildEntities = new Collection<ChildEntity>();
         }
 
     }

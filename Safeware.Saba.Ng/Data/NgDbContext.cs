@@ -1,3 +1,4 @@
+using Safeware.Saba.Ng.ChildEntities;
 using Safeware.Saba.Ng.MasterEntities;
 using MongoDB.Driver;
 using Volo.Abp.Data;
@@ -9,6 +10,7 @@ namespace Safeware.Saba.Ng.Data;
 [ConnectionStringName("Default")]
 public class NgDbContext : AbpMongoDbContext
 {
+    public IMongoCollection<ChildEntity> ChildEntities => Collection<ChildEntity>();
     public IMongoCollection<MasterEntity> MasterEntities => Collection<MasterEntity>();
     /* Add mongo collections here. Example:
      * public IMongoCollection<Question> Questions => Collection<Question>();
