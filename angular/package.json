@@ -33,7 +33,7 @@
     "@volo/ngx-lepton-x.core": "~4.0.0",
     "@volosoft/abp.ng.theme.lepton-x": "~4.0.0",
     "@angular/animations": "~18.1.0",
-    "@angular/common": "~18.1.0",
+    "@angular/common": "~20.3.25",
     "@angular/compiler": "~18.1.0",
     "@angular/core": "~18.1.0",
     "@angular/forms": "~18.1.0",
